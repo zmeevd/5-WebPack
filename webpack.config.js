@@ -5,12 +5,11 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
+      template: "./src/index.html", //Путь откуда брать, заработало
+      filename: "main.html", // НЕ срабатывает
     }),
   ],
 };
