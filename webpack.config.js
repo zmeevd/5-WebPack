@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html", //Путь откуда брать, заработало
-      filename: "main.html", // НЕ срабатывает
+      filename: "./main.html", // Переименовать , не забывать ./
     }),
   ],
 };
