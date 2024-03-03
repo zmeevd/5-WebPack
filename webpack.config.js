@@ -1,4 +1,4 @@
-const path = require('path'); //пакет node.js который работает с путмями
+const path = require("path"); //пакет node.js который работает с путмями
 const HtmlWebpackPlugin = require("html-webpack-plugin"); //плагин
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //плагин для css
 
@@ -19,8 +19,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html", //Путь откуда брать, заработало
-      filename: "./main.html", // Переименовать , не забывать ./
+      filename: "./html.html", // Переименовать , не забывать ./
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
   ],
 };
